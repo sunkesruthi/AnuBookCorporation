@@ -1,0 +1,443 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically centered */
+  background-color: #d32f2f; /* Gold background */
+  padding: 10px 5px 10px 30px;
+  color: white;
+}
+
+nav {
+  flex-grow: 1; /* Ensures the nav section takes up all available space */
+  display: flex;
+  justify-content: flex-end; /* Align navigation items to the right */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0; /* Remove default margin */
+  padding: 15px 50px 15px 0px; /* Remove default padding */
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 18px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+  background-color: #9a0007; /* Darker gold */
+  border-radius: 5px;
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px; /* Reduce padding for smaller screens */
+  }
+
+  header .logo {
+    font-size: 20px; /* Slightly reduce logo size */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center; /* Center links horizontally */
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 15px; /* Add spacing between links on mobile */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Smaller font size on mobile */
+    padding: 10px 15px; /* Adjust padding for mobile */
+  }
+}
+
+/* Secondary Navigation */
+#secondary-nav {
+  background-color: gold; /* Lighter red */
+  text-align: center;
+}
+
+#secondary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0px;
+  display: inline-block;
+}
+
+#secondary-nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+}
+
+#secondary-nav a {
+  color: darkblue;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;  /* To position the arrow */
+}
+
+#secondary-nav .arrow {
+  margin: 0 0 3px 8px;
+  border: solid darkblue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+#secondary-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: gold;
+  min-width: 160px; /* Set a minimum width to prevent it being too small */
+  z-index: 1;
+}
+
+#secondary-nav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* Rotate the arrow when hovering over the menu item */
+#secondary-nav ul li:hover .arrow {
+  transform: rotate(-135deg);  /* Rotate to point up */
+}
+
+/* Add border below each link in the dropdown */
+#secondary-nav .dropdown-content a {
+  padding: 10px 20px;  /* Adjust the padding for each link */
+  color: darkblue;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid white; /* Red line below each item */
+  width: 100%;
+}
+
+/* Remove border from the last item */
+#secondary-nav .dropdown-content a:last-child {
+  border-bottom: none; /* Remove the line from the last item */
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  color: #333;
+}
+
+#home h1 {
+  font-size: 36px;
+  color: #d32f2f; /* Red */
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+#corp {
+  width: 600px;
+}
+
+#ep {
+  width: 300px;
+}
+
+#main {
+  width: 100px;
+}
+
+/* About Section */
+#about {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 32px;
+  color: #d32f2f; /* Red */
+  margin-bottom: 0px;
+}
+
+#about p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+#about img {
+  width: auto;
+  height: 100px;
+  border-radius: 10px;
+}
+
+#aboutlogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Product Section */
+#products {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#products h2 {
+  color: #d32f2f;
+  font-size: 32px;
+}
+
+#products h3 {
+  font-size: 24px;
+  color: white; /* Change text color to white */
+  font-weight: bold;
+  margin: 40px auto 40px auto; /* Center the element horizontally and keep a top and bottom margin */
+  padding: 0px 20px; /* Add padding for button-like appearance */
+  background-color: #d32f2f; /* Red background */
+  border-radius: 15px; /* Rounded corners for a button-like effect */
+  text-align: center;
+}
+
+
+h5 {
+   font-size: 20px;
+   color: blue;
+   text-align: left;
+}
+
+.product-category {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+/* Product Cards */
+.product-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 180px;  /* Reduced size */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-category .product-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 5px;
+}
+
+.product-card span {
+  font-size: 14px;
+  color: #d32f2f;  /* Red price */
+  font-weight: bold;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Section */
+#contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 95%;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact h2 {
+  font-size: 32px; /* Reduced font size */
+  color: #d32f2f;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Contact Info Layout */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Reduced gap between columns */
+  margin-top: 30px;
+  width: 100%;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+/* Each column: Vijayawada, Hyderabad, and Information */
+.contact-column {
+  flex: 1; /* Makes each column take equal space */
+  min-width: 280px; /* Prevents columns from being too small on narrow screens */
+  max-width: 33%; /* Ensures each column takes up 1/3 of the container */
+  text-align: center;
+}
+
+.contact-column h3 {
+  font-size: 20px; /* Reduced font size */
+  color: #d32f2f;
+  margin-bottom: 10px; /* Reduced margin */
+  font-weight: bold;
+  border-bottom: 2px solid #f44336;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap between icon and text */
+  font-size: 16px; /* Reduced font size */
+  color: #555;
+  line-height: 1.4; /* Reduced line height for better spacing */
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.contact-item i {
+  font-size: 1.4em; /* Reduced icon size */
+  color: #d32f2f;
+}
+
+/* Links Styling */
+#contact a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #9a0007;
+  text-decoration: underline;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  #contact {
+    padding: 30px 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-column {
+    margin-bottom: 20px;
+    flex: none;
+    width: 100%; /* Stack the columns vertically */
+    max-width: none; /* Remove max-width so columns can take full width */
+  }
+
+  .contact-item {
+    font-size: 14px; /* Further reduced font size */
+    gap: 8px; /* Reduced gap */
+  }
+
+  .contact-item i {
+    font-size: 1.3em; /* Reduced icon size */
+  }
+}
+
+@media (max-width: 480px) {
+  #contact h2 {
+    font-size: 28px; /* Slightly reduced font size */
+  }
+
+  .contact-item {
+    font-size: 12px; /* Further reduced font size */
+  }
+
+  .contact-item i {
+    font-size: 1.2em; /* Reduced icon size */
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #d32f2f; /* Red background */
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #9a0007;
+  text-decoration: underline;
+}
