@@ -52,14 +52,21 @@
 
 <!-- Home Section -->
 <section id="home">
-    <!-- <h1>Welcome to Anu Book Corporation</h1> -->
     <img id="main" src="logo.jpg">
     <br/>
     <img id="corp" src="Anu Book Corporation-1.jpg">
     <br/>
     <img id="ep" src="Edu-1.jpg">
-    <!-- <p>Trust & Quality in Educational Publishing</p> -->
+    
+    <!-- Scrolling Ads Section -->
+    <div id="ad-container">
+        <img class="ad-image" id="ad1" src="ad1.jpg" />
+        <img class="ad-image" id="ad2" src="ad2.jpg" />
+        <img class="ad-image" id="ad3" src="ad3.png" />
+    </div>
 </section>
+
+
 
 <!-- About Section -->
 <section id="about">
@@ -67,13 +74,24 @@
     <img src="sukumar.jpg">
     <h2>About Us</h2>
     </div>
-    <p>At Anu Book Corporation, we specialize in educational publishing. Our mission is to provide quality textbooks and workbooks for students in various mediums, helping them excel in their studies. We aim to foster a love for learning through well-crafted content that is both informative and engaging.</p>
+    <p>At Anu Book Corporation, we specialize in educational publishing. Our mission is to provide quality textbooks and workbooks for students in various mediums, helping them excel in their studies. We aim to foster a love for learning through well-crafted content that is both informative and engaging.At Anu Book Corporation, we specialize in educational publishing. Our mission is to provide quality textbooks and workbooks for students in various mediums, helping them excel in their studies. We aim to foster a love for learning through well-crafted content that is both informative and engaging.</p>
 </section>
 
 <!-- Products Section -->
 <section id="products">
     <h2>Our Products</h2>
     <h3 id="general">General Books</h3>
+    <div id="link-assign">
+    <a href="javascript:void(0);" id="view-image-link">Click here - Our Copywriting Specialities</a>
+    </div>
+    <!-- Modal for the image -->
+    <div id="image-modal" class="modal">
+     <div class="modal-content">
+        <span id="close-modal" class="close-btn">&times;</span>
+        <img src="cp1.jpg" alt="Image to view" class="modal-image">
+        <img src="cp2.jpg" alt="Image to view" class="modal-image">
+     </div>
+    </div>
     <div class="product-category" id="copywriting-telugu">
         <h5>Copywriting - Telugu</h5>
         <!-- List of Telugu Copywriting Books (Example) -->
@@ -106,7 +124,6 @@
         </div>
         <!-- More Telugu Copywriting Books -->
     </div>
-
     <div class="product-category" id="copywriting-english">
         <h5>Copywriting - English</h5>
         <div class="product-card-wrapper">
@@ -339,7 +356,7 @@
         <!-- More Workbooks for Class 1-5 -->
     </div>
 
-    <h3 id="ts">TS Books</h3>
+    <h3 id="ts">TG Books</h3>
     
     <div class="product-category" id="amd-em-ts">
         <h5>AMD - English Medium</h5>

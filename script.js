@@ -22,8 +22,53 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const viewImageLink = document.getElementById('view-image-link');
+    const imageModal = document.getElementById('image-modal');
+    const closeModal = document.getElementById('close-modal');
+  
+    // Open the modal
+    viewImageLink.addEventListener('click', function() {
+      imageModal.style.display = 'block';
+    });
+  
+    // Close the modal
+    closeModal.addEventListener('click', function() {
+      imageModal.style.display = 'none';
+    });
+  
+    // Close the modal when the user clicks anywhere outside the modal
+    window.addEventListener('click', function(event) {
+      if (event.target === imageModal) {
+        imageModal.style.display = 'none';
+      }
+    });
+  });
+  
+  
     
-
+  let currentAdIndex = 0;
+  const ads = document.querySelectorAll('.ad-image');
+  const totalAds = ads.length;
+  
+  function showNextAd() {
+    // Remove visibility from the current ad
+    ads[currentAdIndex].classList.remove('visible');
+  
+    // Move to the next ad (loop back to the first one)
+    currentAdIndex = (currentAdIndex + 1) % totalAds;
+  
+    // Add visibility to the next ad
+    ads[currentAdIndex].classList.add('visible');
+  }
+  
+  // Show the first ad initially
+  ads[currentAdIndex].classList.add('visible');
+  
+  // Change ads every 5 seconds
+  setInterval(showNextAd, 5000); // 5000ms = 5 seconds
+  
 // Product card hover effect for highlighting the card on hover
 const productCards = document.querySelectorAll('.product-card');
 
