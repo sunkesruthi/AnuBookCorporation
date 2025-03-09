@@ -24,13 +24,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   document.addEventListener('DOMContentLoaded', function () {
-    const viewImageLink = document.getElementById('view-image-link');
+    const viewImageLinks = document.querySelectorAll('.view-image-link'); // Select all the links
     const imageModal = document.getElementById('image-modal');
     const closeModal = document.getElementById('close-modal');
-  
-    // Open the modal
-    viewImageLink.addEventListener('click', function() {
+    const modalImage = document.querySelector('.modal-image');
+    
+    // Function to open the modal with new images
+    function openModal(images) {
+      const imageArray = images.split(',').map(img => img.trim());
+      modalImage.src = imageArray[0]; // Set the first image as default in the modal
       imageModal.style.display = 'block';
+      
+      // You can cycle through the images by clicking next/prev or just display them one by one.
+      // For simplicity, we'll just show the first image.
+      // You can implement next/prev logic if needed.
+    }
+    
+    // Add click event to each view-image-link
+    viewImageLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        const images = this.getAttribute('data-images');
+        openModal(images);
+      });
     });
   
     // Close the modal
@@ -38,16 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
       imageModal.style.display = 'none';
     });
   
-    // Close the modal when the user clicks anywhere outside the modal
+    // Close the modal when the user clicks outside the modal
     window.addEventListener('click', function(event) {
       if (event.target === imageModal) {
         imageModal.style.display = 'none';
       }
     });
-  });
+  });  
   
-  
-    
+
   let currentAdIndex = 0;
   const ads = document.querySelectorAll('.ad-image');
   const totalAds = ads.length;
