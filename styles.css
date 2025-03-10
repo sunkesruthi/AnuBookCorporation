@@ -422,7 +422,7 @@ nav ul li a:hover {
 
 /* Product Section */
 #products {
-  padding: 50px 20px;
+  padding: 50px 20px 25px 20px;
   background-color: #fff;
   text-align: center;
 }
@@ -604,7 +604,7 @@ h5 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Background color */
   overflow: auto;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .modal-content {
@@ -612,14 +612,14 @@ h5 {
   margin: 0px auto;
   padding: 5px 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
+  width: 50%;
+  max-width: 100%;
   position: relative;
 }
 
 .modal-image {
-  width: 100%;
-  height: 600px;
+  width: 95%;
+  height: 70%;
   max-width: 100%;
   border-radius: 8px;
 }
