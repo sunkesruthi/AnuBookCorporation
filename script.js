@@ -1,28 +1,39 @@
 // Ensure the DOM is fully loaded before executing JavaScript
 document.addEventListener("DOMContentLoaded", function () {
-    // Get all list items with the class 'dropdown'
-    const dropdowns = document.querySelectorAll("#secondary-nav ul li");
-  
-    // Iterate through each list item and add event listeners
-    dropdowns.forEach(function (dropdown) {
-      // When the mouse enters the list item, show the dropdown
-      dropdown.addEventListener("mouseenter", function () {
-        const dropdownContent = dropdown.querySelector(".dropdown-content");
-        if (dropdownContent) {
-          dropdownContent.style.display = "block"; // Show dropdown
-        }
+  // Get all dropdown menu items
+  const dropdowns = document.querySelectorAll("#secondary-nav ul li");
+
+  dropdowns.forEach(function (dropdown) {
+      dropdown.addEventListener("click", function (event) {
+          event.stopPropagation(); // Prevent click from closing immediately
+          
+          // Close all other dropdowns before opening the clicked one
+          document.querySelectorAll("#secondary-nav .dropdown-content").forEach(menu => {
+              if (menu !== dropdown.querySelector(".dropdown-content")) {
+                  menu.style.display = "none";
+                  menu.parentElement.classList.remove("active"); // Remove active class
+              }
+          });
+
+          // Toggle dropdown visibility
+          const dropdownContent = dropdown.querySelector(".dropdown-content");
+          if (dropdownContent) {
+              const isVisible = dropdownContent.style.display === "block";
+              dropdownContent.style.display = isVisible ? "none" : "block"; // Toggle display
+              dropdown.classList.toggle("active", !isVisible); // Toggle active class for arrow rotation
+          }
       });
-  
-      // When the mouse leaves the list item, hide the dropdown
-      dropdown.addEventListener("mouseleave", function () {
-        const dropdownContent = dropdown.querySelector(".dropdown-content");
-        if (dropdownContent) {
-          dropdownContent.style.display = "none"; // Hide dropdown
-        }
-      });
-    });
   });
-  
+
+  // Close dropdown if clicking anywhere outside
+  document.addEventListener("click", function () {
+      document.querySelectorAll("#secondary-nav .dropdown-content").forEach(menu => {
+          menu.style.display = "none";
+          menu.parentElement.classList.remove("active"); // Remove active class
+      });
+  });
+});
+
   document.addEventListener('DOMContentLoaded', function () {
     const viewImageLinks = document.querySelectorAll('.view-image-link'); // Select all the links
     const imageModal = document.getElementById('image-modal');

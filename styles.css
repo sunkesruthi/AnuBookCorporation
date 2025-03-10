@@ -1,15 +1,35 @@
 /* Global Styles */
+/* Reset and Box Sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #fff;
   color: #333;
   line-height: 1.6;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+    padding: 5px;
+    line-height: 1.5;
+  }
 }
 
 /* Header and Navigation */
@@ -80,6 +100,30 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  header {
+    padding: 10px 15px; /* Further reduce padding for smaller screens */
+  }
+
+  header .logo {
+    font-size: 18px; /* Further reduce logo size */
+  }
+
+  nav ul {
+    flex-direction: column; /* Keep stacked layout */
+    align-items: center; /* Ensure links are centered */
+  }
+
+  nav ul li {
+    margin-bottom: 10px; /* Slightly less spacing between links */
+  }
+
+  nav ul li a {
+    font-size: 14px; /* Smaller font size for better fit */
+    padding: 8px 12px; /* Adjust padding to make links more touch-friendly */
+  }
+}
+
 /* Secondary Navigation */
 #secondary-nav {
   background-color: gold; /* Lighter red */
@@ -125,16 +169,12 @@ nav ul li a:hover {
   top: 100%;
   left: 0;
   background-color: gold;
-  min-width: 160px; /* Set a minimum width to prevent it being too small */
+  min-width: 160px;
   z-index: 5;
 }
 
-#secondary-nav ul li:hover .dropdown-content {
-  display: block;
-}
-
-/* Rotate the arrow when hovering over the menu item */
-#secondary-nav ul li:hover .arrow {
+/* Rotate the arrow when the dropdown is active */
+#secondary-nav ul li.active .arrow {
   transform: rotate(-135deg);  /* Rotate to point up */
 }
 
@@ -227,6 +267,68 @@ nav ul li a:hover {
   height: auto;       /* Ensures the image maintains its aspect ratio */
 }
 
+/* Responsive Design for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  #home {
+    padding: 8px 15px; /* Reduce padding for smaller screens */
+  }
+
+  #ad-container {
+    height: 250px; /* Reduce height for smaller screens */
+  }
+
+  .ad-image {
+    object-fit: cover; /* Makes images fit better without large gaps */
+  }
+
+  #ad2 {
+    width: 80%; /* Make the image slightly bigger for better visibility */
+  }
+
+  #corp {
+    max-width: 500px; /* Reduce max-width for better fit */
+  }
+
+  #ep {
+    max-width: 250px;
+  }
+
+  #main {
+    max-width: 80px;
+  }
+}
+
+/* Responsive Design for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  #home {
+    padding: 5px 10px; /* Further reduce padding */
+  }
+
+  #ad-container {
+    height: 200px; /* Further reduce height */
+  }
+
+  .ad-image {
+    object-fit: cover;
+  }
+
+  #ad2 {
+    width: 90%; /* Make the image larger on small screens */
+  }
+
+  #corp {
+    max-width: 100%; /* Allow the image to take full width */
+  }
+
+  #ep {
+    max-width: 200px; /* Reduce size for better fit */
+  }
+
+  #main {
+    max-width: 60px; /* Reduce size further */
+  }
+}
+
 /* About Section */
 #about {
   padding: 50px 20px;
@@ -258,6 +360,56 @@ nav ul li a:hover {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+
+/* Responsive Design for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  #about {
+    padding: 40px 15px; /* Reduce padding */
+  }
+
+  #about h2 {
+    font-size: 28px; /* Reduce heading size */
+  }
+
+  #about p {
+    font-size: 16px; /* Adjust paragraph font size */
+    line-height: 1.6; /* Reduce line height for better readability */
+  }
+
+  #about img {
+    height: 80px; /* Adjust image size */
+  }
+
+  #aboutlogo {
+    gap: 8px; /* Reduce spacing */
+  }
+}
+
+/* Responsive Design for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  #about {
+    padding: 30px 10px; /* Further reduce padding */
+  }
+
+  #about h2 {
+    font-size: 24px; /* Reduce heading size for smaller screens */
+  }
+
+  #about p {
+    font-size: 14px; /* Reduce font size */
+    line-height: 1.5; /* Adjust line height */
+    margin-bottom: 20px; /* Reduce margin */
+  }
+
+  #about img {
+    height: 60px; /* Make images smaller for compact layout */
+  }
+
+  #aboutlogo {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 5px; /* Reduce gap */
+  }
 }
 
 /* Product Section */
@@ -335,6 +487,90 @@ h5 {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Responsive Design for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  #products {
+    padding: 40px 15px; /* Reduce padding */
+  }
+
+  #products h2 {
+    font-size: 28px; /* Reduce heading size */
+  }
+
+  #products h3 {
+    font-size: 18px; /* Reduce font size */
+    padding: 5px 15px;
+  }
+
+  h5 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  .product-category {
+    gap: 15px; /* Reduce spacing */
+    margin-bottom: 60px;
+  }
+
+  .product-card-wrapper {
+    gap: 30px; /* Reduce gap */
+  }
+
+  .product-card {
+    width: 160px; /* Slightly reduce card width */
+    padding: 12px;
+  }
+
+  .product-card p {
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+/* Responsive Design for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  #products {
+    padding: 30px 10px; /* Further reduce padding */
+  }
+
+  #products h2 {
+    font-size: 24px; /* Reduce heading size */
+  }
+
+  #products h3 {
+    font-size: 16px; /* Reduce heading size */
+    padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  h5 {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .product-category {
+    gap: 10px; /* Reduce spacing */
+    margin-bottom: 40px;
+  }
+
+  .product-card-wrapper {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%; /* Make cards take full width */
+    max-width: 250px; /* Limit max width */
+    padding: 10px;
+  }
+
+  .product-card img {
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .product-card p {
+    font-size: 14px;
+  }
+}
+
 .view-image-link {
   font-size: 14px;
   text-decoration: underline;
@@ -380,13 +616,6 @@ h5 {
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {  /* Mobile view */
-  .modal-image {
-      height: auto;
-      width: 100%;
-  }
-}
-
 .close-btn {
   position: absolute;
   top: 10px;
@@ -402,6 +631,66 @@ h5 {
   color: black;
   text-decoration: none;
 }
+
+/* Responsive Design for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .view-image-link {
+    font-size: 13px; /* Slightly smaller font */
+    margin-top: 15px; /* Reduce margin */
+  }
+
+  #link-assign {
+    text-align: center; /* Center-align for better layout */
+  }
+
+  .modal-content {
+    width: 90%; /* Increase width for better fit */
+    max-width: 450px;
+    padding: 10px 15px; /* Adjust padding */
+  }
+
+  .modal-image {
+    height: auto; /* Allow image to adjust dynamically */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .close-btn {
+    top: 8px;
+    right: 15px;
+    font-size: 28px;
+  }
+}
+
+/* Responsive Design for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .view-image-link {
+    font-size: 12px; /* Reduce font size */
+    margin-top: 10px;
+  }
+
+  #link-assign {
+    text-align: center; /* Keep it centered for smaller screens */
+  }
+
+  .modal-content {
+    width: 95%; /* Use almost full width */
+    max-width: 400px;
+    padding: 8px 12px;
+  }
+
+  .modal-image {
+    height: auto; /* Adjust to keep aspect ratio */
+    width: 100%;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 24px; /* Reduce button size */
+  }
+}
+
 
 
 /* Contact Section */
@@ -526,18 +815,49 @@ footer {
   background-color: #d32f2f; /* Red background */
   color: white;
   text-align: center;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 15px 20px;
+  font-size: 16px;
   margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Footer links */
 footer a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  margin: 5px 10px;
 }
 
 footer a:hover {
   color: #9a0007;
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  footer a {
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  footer a {
+    font-size: 12px;
+    margin: 3px;
+  }
 }
