@@ -20,7 +20,7 @@ body {
 @media (max-width: 768px) {
   body {
     font-size: 14px;
-    padding: 8px;
+    padding: 0px;
   }
 }
 
@@ -653,12 +653,12 @@ h5 {
 
   .modal-content {
     width: 90%; /* Increase width for better fit */
-    max-width: 450px;
+    max-width: 400px;
     padding: 10px 15px; /* Adjust padding */
   }
 
   .modal-image {
-    height: auto; /* Allow image to adjust dynamically */
+    height: 500px; /* Allow image to adjust dynamically */
     width: 100%;
     max-width: 100%;
   }
