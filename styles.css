@@ -13,7 +13,7 @@ body {
   color: #333;
   line-height: 1.6;
   font-size: 16px;
-  padding: 10px;
+  padding: 0px;
 }
 
 /* Responsive Design */
@@ -226,9 +226,13 @@ nav ul li a:hover {
 }
 
 #ad1 {
-  width:100%;
+  width: 100%;
   height: 100%;
   object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* This shifts the image back by half its width, centering it */
 }
 
 #ad2 {
@@ -242,9 +246,13 @@ nav ul li a:hover {
 }
 
 #ad3 {
-  width:100%;
-  height: 100%;
+  width:70%;
+  height: 80%;
   object-fit: contain;
+  position: absolute;
+  top: 20px;
+  left: 50%; /* Center the image horizontally */
+  transform: translateX(-50%); /* This shifts the image back by half its width, centering it */
 }
 
 /* Additional styles for images */
@@ -738,6 +746,7 @@ h5 {
   margin-bottom: 10px; /* Reduced margin */
   font-weight: bold;
   border-bottom: 2px solid #f44336;
+  text-align: center;
 }
 
 .contact-item {
