@@ -336,9 +336,7 @@ h5 {
 }
 
 .view-image-link {
-  color: #d32f2f;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: underline;
   margin-top: 20px;
 }
@@ -377,9 +375,16 @@ h5 {
 
 .modal-image {
   width: 100%;
-  height: auto;
+  height: 600px;
   max-width: 100%;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {  /* Mobile view */
+  .modal-image {
+      height: auto;
+      width: 100%;
+  }
 }
 
 .close-btn {
@@ -435,7 +440,7 @@ h5 {
   flex: 1; /* Makes each column take equal space */
   min-width: 280px; /* Prevents columns from being too small on narrow screens */
   max-width: 33%; /* Ensures each column takes up 1/3 of the container */
-  text-align: center;
+  text-align: left;
 }
 
 .contact-column h3 {
