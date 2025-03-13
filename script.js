@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });  
   
-
   let currentAdIndex = 0;
   const ads = document.querySelectorAll('.ad-image');
   const totalAds = ads.length;
