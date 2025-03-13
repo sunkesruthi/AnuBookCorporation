@@ -339,7 +339,7 @@ nav ul li a:hover {
 
 /* About Section */
 #about {
-  padding: 50px 20px;
+  padding: 50px 30px;
   background-color: #f9f9f9;
   color: #333;
   text-align: center;
@@ -352,10 +352,10 @@ nav ul li a:hover {
 }
 
 #about p {
-  font-size: 18px;
+  font-size: 17px;
   color: #555;
-  line-height: 1.8;
-  margin-bottom: 30px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 #about img {
@@ -373,7 +373,7 @@ nav ul li a:hover {
 /* Responsive Design for Tablets (max-width: 768px) */
 @media (max-width: 768px) {
   #about {
-    padding: 40px 15px; /* Reduce padding */
+    padding: 40px 30px; /* Reduce padding */
   }
 
   #about h2 {
@@ -381,8 +381,8 @@ nav ul li a:hover {
   }
 
   #about p {
-    font-size: 16px; /* Adjust paragraph font size */
-    line-height: 1.6; /* Reduce line height for better readability */
+    font-size: 14px; /* Adjust paragraph font size */
+    line-height: 1.4; /* Reduce line height for better readability */
   }
 
   #about img {
@@ -397,7 +397,7 @@ nav ul li a:hover {
 /* Responsive Design for Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
   #about {
-    padding: 30px 10px; /* Further reduce padding */
+    padding: 30px 15px; /* Further reduce padding */
   }
 
   #about h2 {
@@ -405,9 +405,9 @@ nav ul li a:hover {
   }
 
   #about p {
-    font-size: 14px; /* Reduce font size */
-    line-height: 1.5; /* Adjust line height */
-    margin-bottom: 20px; /* Reduce margin */
+    font-size: 12px; /* Reduce font size */
+    line-height: 1.2; /* Adjust line height */
+    margin-bottom: 15px; /* Reduce margin */
   }
 
   #about img {

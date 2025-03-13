@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ads[currentAdIndex].classList.add('visible');
   
   // Change ads every 5 seconds
-  setInterval(showNextAd, 5000); // 5000ms = 5 seconds
+  setInterval(showNextAd, 10000); // 5000ms = 5 seconds
   
 // Product card hover effect for highlighting the card on hover
 const productCards = document.querySelectorAll('.product-card');
