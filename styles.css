@@ -124,6 +124,75 @@ nav ul li a:hover {
   }
 }
 
+/* Modal Styles */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999; /* Ensure it's above all other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content1 {
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: relative; /* To anchor the close button */
+}
+
+.close {
+  position: absolute;
+  top: 35px;  /* Close to the top edge of the modal image */
+  right: 325px;  /* Adjusted to be within the modal bounds */
+  color: red;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 10001; /* Ensure close button is above all */
+}
+
+.close:hover {
+  color: #d32f2f; /* Change color on hover */
+}
+
+/* Responsive Design for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .close {
+    position: absolute;
+    top: 80px;  /* Close to the top edge of the modal image */
+    right: 35px;  /* Adjusted to be within the modal bounds */
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10001; /* Ensure close button is above all */
+  }
+}
+
+/* Responsive Design for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .close {
+    position: absolute;
+    top: 60px;  /* Close to the top edge of the modal image */
+    right: 20px;  /* Adjusted to be within the modal bounds */
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 10001; /* Ensure close button is above all */
+  }
+}
+
+
 /* Secondary Navigation */
 #secondary-nav {
   background-color: gold; /* Lighter red */
@@ -222,7 +291,7 @@ nav ul li a:hover {
 
 .ad-image.visible {
   opacity: 1; /* Only the visible image has opacity 1 */
-  z-index: 1; /* Set z-index to 1 for the active (visible) image */
+  z-index: 0; /* Set z-index to 1 for the active (visible) image */
 }
 
 #ad1 {
@@ -246,8 +315,8 @@ nav ul li a:hover {
 }
 
 #ad3 {
-  width:70%;
-  height: 80%;
+  width:80%;
+  height: 90%;
   object-fit: contain;
   position: absolute;
   top: 20px;
@@ -612,6 +681,7 @@ h5 {
   margin: 0px auto;
   padding: 5px 20px;
   border: 1px solid #888;
+  border-radius: 5px;
   width: 50%;
   max-width: 100%;
   position: relative;
@@ -654,6 +724,7 @@ h5 {
   .modal-content {
     width: 90%; /* Increase width for better fit */
     max-width: 400px;
+    border-radius: 5px;
     padding: 10px 15px; /* Adjust padding */
   }
 
@@ -684,6 +755,7 @@ h5 {
   .modal-content {
     width: 95%; /* Use almost full width */
     max-width: 400px;
+    border-radius: 5px;
     padding: 8px 12px;
   }
 
