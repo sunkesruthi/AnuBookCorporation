@@ -181,10 +181,10 @@ nav ul li a:hover {
 @media (max-width: 480px) {
   .close {
     position: absolute;
-    top: 60px;  /* Close to the top edge of the modal image */
+    top: 280px;  /* Close to the top edge of the modal image */
     right: 20px;  /* Adjusted to be within the modal bounds */
     color: red;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
